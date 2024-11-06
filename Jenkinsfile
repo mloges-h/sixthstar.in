@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        NEXTJS_CONTAINER = 'jswebsite_job_nextjs_1'  // Correct container name for your Next.js container
+        NEXTJS_CONTAINER = 'sixthstar_js'  // Correct container name for your Next.js container
         DOCKER_HOST = 'tcp://103.173.112.12:8081'  // Docker host configuration
     }
     stages {
