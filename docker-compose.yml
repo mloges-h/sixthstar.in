@@ -2,7 +2,7 @@ version: '3.3'
 services:
   nextjs:
     build: .
-    container_name: spamcloud_nextjs
+    container_name: sixthstar_js
     ports:
       - "8081:4200"  # Exposing Next.js app on port 8080
     environment:
@@ -13,7 +13,7 @@ services:
 
   db:
     image: mysql:5.7  # MySQL image, adjust if using another DB
-    container_name: spamcloud_db
+    container_name: sixthstar_db
     environment:
       MYSQL_ROOT_PASSWORD: Sixth*54321  # Set MySQL root password
       MYSQL_DATABASE: Sixth*54321  # Optional, specify a default DB
