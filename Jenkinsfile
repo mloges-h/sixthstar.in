@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/mloges-h/sixthinn.git'
+                git url: 'https://github.com/mloges-h/sixthstar.in.git'
             }
         }
         stage('Stop and Remove Containers') {
