@@ -1,0 +1,27 @@
+.client-slider {
+  overflow: hidden;
+}
+
+.slider {
+  animation: clientslidein 20s linear infinite; 
+  white-space: nowrap;
+}
+
+.logos {
+  display: inline-block;
+}
+
+.slider .logos img {
+  padding: 10px;
+  display: inline-block;
+  width: 224px; /* Keep the image width consistent */
+}
+
+@keyframes clientslidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-500%, 0, 0); 
+  }
+}
