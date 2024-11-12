@@ -1,0 +1,38 @@
+version: '3.3'
+
+services:
+  notes:
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+      - "9229:9229"
+    environment:
+      - SERVER_PORT=8080
+      - DATABASE_CONNECTIONSTRING=mysql://logesh:Sixth*54321@mysql:3306/logandb
+    volumes:
+      - ./:/app
+    command: ./entrypoint.sh
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "Sixth*54321"
+      MYSQL_DATABASE: "logandb"
+      MYSQL_USER: "logesh"
+      MYSQL_PASSWORD: "Sixth*54321"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: "Sixth*54321"
+    ports:
+      - "8081:80"
+
+volumes:
+  mysql_data:
